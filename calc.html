@@ -5,32 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel ="stylesheet" href="style1.css"
-    <script src ="calc.js"></script>
+    <link rel="stylesheet" href="calc.css">
+    <script src="calc.js"></script>
 </head>
-
 <body>
-
-<div ="container">
-    <div class="calculator">
-        <form>
-            <div>
-                <p> Enter first number here: 
-                    <input type ="number" class="num" input id="x">
-                </p><br>
-                <p> Enter Second Number Here:
-                    <input type="number" class="num" input id="y">
-                </p>
-                <input type="button" value="+" onclick="add()" class="operator">
-                <input type="button" value="*" onclick="multi()" class="operator">
-                <input type="button" value="-" onclick="sub()" class="operator">
-                <input type="button" value="/" onclick="div()" class="operator">
-                <input type="button" value="%" onclick ="mod()" class="operator">
+    <div class="container">
+        <button type="submit" class="btn" onclick="openCalc()">Start Calculator</button>
+        <div class = "calculator" id = "calculator">    
+            <div class ="header">
+                <img src ="calc.png">
+                <h2>Your Calculator App!</h2>
+                <button type="button" onclick="closeCalc()">&times;</button>
+            </div> 
+            
+            <div class="calc-body">
+                Enter Number 1: <input type ="text" id="var1"><br>
+                Enter Number 2: <input type="text" id="var2"><br>
+                <input type ="button" value="+" class="operator" onclick="add()">
+                <input type ="button" value="-" class="operator" onclick="sub()">
+                <input type ="button" value="*" class="operator" onclick="multi()">
+                <input type ="button" value="/" class="operator" onclick="divi()">
+                <input type ="button" value="%" class="operator" onclick="modulo()">
             </div>
-        </form>
+
+            <div class="result" id="popup">
+                <h2>The answer is...</h2>
+                <div class ="display">
+                    <input type="text" name ="display">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
     
+    <div id="overlay"></div>
+
 </body>
 </html>
-
